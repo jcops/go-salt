@@ -12,9 +12,13 @@
 
 ```
 
-###  go-salt
+### go-salt
 
-一个go + vue 前后端项目,包含JWT,RBAC，用户管理，salt远程操作等等。
+一个go + vue 前后端项目,包含JWT,RBAC，用户管理，salt远程操作等等。目的是提供一套轻量的中后台开发框架，方便、快速的完成业务需求的开发。 
+
+- [在线演示地址](118.25.39.84:10010) (用户名：admin，密码：123456)（`温馨提醒：为了达到更好的演示效果，这里给出了拥有最高权限的用户，请手下留情！谢谢！`）
+
+  
 
 ### 目录结构
 
@@ -151,13 +155,29 @@ go run  main.go
 
 http://127.0.0.1:8080/swagger/index.html
 
+
+
 ### *example* 
 
 ![01](https://github.com/jcops/go-salt/blob/master/data/04.png)
 
-![02](https://github.com/jcops/go-salt/blob/master/data/01.png)
+![02](https://github.com/jcops/go-salt/blob/master/data/04.png)
 
-![03](https://github.com/jcops/go-salt/blob/master/data/02.png)
+![03](https://github.com/jcops/go-salt/blob/master/data/04.png)
 
-![04](https://github.com/jcops/go-salt/blob/master/data/03.png)
+![04](https://github.com/jcops/go-salt/blob/master/data/04.png)
+
+
+
+## 感谢以下框架的开源支持
+
+- [Beego] - <http://beego.me/>
+- [GORM] - <http://gorm.io/>
+- [Casbin] - <https://casbin.org/>
+
+## MIT License
+
+```
+Copyright (c) 2019 Eric
+```
 
