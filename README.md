@@ -60,7 +60,7 @@ eric  GET  /api/v1/users 地址的时候，会去检查权限，因为他属于t
 
 ```
 例如:
-访问 /auth    获取token
+访问 /user/login    获取token
 {
 	"username": "admin",
 	"password": "123456"
