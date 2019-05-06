@@ -1,0 +1,628 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "basePath": "/api",
+    "paths": {
+        "/v1/keyaccept": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "认证获取salt节点",
+                "operationId": "SaltController.认证获取salt节点",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "match",
+                        "description": "match",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keycopy": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "salt执行部署",
+                "operationId": "SaltController.salt推送文件",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "run",
+                        "description": "run",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "tgt",
+                        "description": "match",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "arg1",
+                        "description": "arg1",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "arg2",
+                        "description": "arg1",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keydelete": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "认证获取salt节点",
+                "operationId": "SaltController.认证获取salt节点",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "match",
+                        "description": "match",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keydeploy": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "salt执行部署",
+                "operationId": "SaltController.salt执行部署",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "match",
+                        "description": "match",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "arg",
+                        "description": "arg",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keylist": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "获取salt节点",
+                "operationId": "SaltController.获取salt节点",
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keyping": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "获取salt节点连通性",
+                "operationId": "SaltController.获取salt节点连通性",
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/keyrun": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "description": "salt执行命令",
+                "operationId": "SaltController.salt执行命令",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "match",
+                        "description": "match",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "cmd",
+                        "description": "cmd",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string}"
+                    },
+                    "404": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/v1/menu": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "查询菜单",
+                "description": "查询菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "更新菜单",
+                "description": "更新菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "添加菜单",
+                "description": "添加菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/menu/{id}": {
+            "delete": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "删除菜单",
+                "description": "删除菜单",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/register": {
+            "post": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "注册用户",
+                "description": "注册用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "username",
+                        "description": "username",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "password",
+                        "description": "password",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "role_id",
+                        "description": "role_id",
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/role": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "查询所有角色",
+                "description": "查询所有角色",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "修改角色信息",
+                "description": "修改角色信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "添加角色",
+                "description": "添加角色",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/role/{id}": {
+            "delete": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "删除角色",
+                "description": "删除角色",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/users": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "查询所有用户",
+                "description": "查询所有用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/users/": {
+            "put": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "修改用户密码",
+                "description": "修改用户密码",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "修改用户信息",
+                "description": "修改用户信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "id",
+                        "description": "id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    {
+                        "in": "body",
+                        "name": "role_id",
+                        "description": "role_id",
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        },
+        "/v1/users/{id}": {
+            "get": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "查询单个用户",
+                "description": "查询单个用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "v1"
+                ],
+                "summary": "删除用户",
+                "description": "删除用户",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "id",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} json \"{ \"code\": 200, \"data\": { \"token\": \"xxx\" }, \"msg\": \"ok\" }\""
+                    },
+                    "400": {
+                        "description": "{string} json \"{\"code\":400,  \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    },
+                    "404": {
+                        "description": "{string} json \"{ \"code\": 404, \"data\":null,\"msg\":\"请求参数错误\"}\""
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "User": {
+            "title": "User",
+            "type": "object"
+        }
+    },
+    "tags": [
+        {
+            "name": "v1",
+            "description": "salt\n"
+        },
+        {
+            "name": "v1",
+            "description": "用户\n"
+        }
+    ]
+}
