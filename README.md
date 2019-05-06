@@ -161,11 +161,11 @@ http://127.0.0.1:8080/swagger/index.html
 
 ![01](https://github.com/jcops/go-salt/blob/master/data/04.png)
 
-![02](https://github.com/jcops/go-salt/blob/master/data/04.png)
+![02](https://github.com/jcops/go-salt/blob/master/data/01.png)
 
-![03](https://github.com/jcops/go-salt/blob/master/data/04.png)
+![03](https://github.com/jcops/go-salt/blob/master/data/02.png)
 
-![04](https://github.com/jcops/go-salt/blob/master/data/04.png)
+![04](https://github.com/jcops/go-salt/blob/master/data/03.png)
 
 
 
